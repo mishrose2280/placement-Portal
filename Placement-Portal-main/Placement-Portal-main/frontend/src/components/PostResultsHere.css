@@ -1,0 +1,242 @@
+/* CSS for the table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Checkbox style */
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ccc;
+}
+
+.checkbox-label:hover input ~ .checkmark {
+    background-color: #bbb;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Submit button style */
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+  
+    table thead th {
+        border-bottom: none;
+    }
+  
+    table tbody td {
+        display: block;
+        text-align: center;
+    }
+  
+    table tbody tr:nth-child(even) {
+        background-color: transparent;
+    }
+  
+    table tbody tr td {
+        border-bottom: 1px solid #ddd;
+    }
+}
+/* CSS for the smaller submit button */
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px; /* Adjust padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px; /* Adjust font size */
+    width: 120px; /* Set width */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+/* CSS for the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+.file-upload-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.file-input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.upload-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #218838;
+}
+
+.note {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+/* Modal container */
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: 80%; /* Adjust as needed */
+    max-width: 400px; /* Adjust width as needed */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* Modal content */
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: auto; /* Adjust width dynamically based on content */
+    text-align: center;
+    max-width: 90%; /* Optional: Set a maximum width to prevent it from becoming too wide */
+}
+
+
+/* Modal header */
+.modal-header {
+    margin-bottom: 10px;
+}
+
+/* Modal body */
+.modal-body {
+    margin-bottom: 20px;
+}
+
+/* Modal footer */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Confirmation button */
+.confirm-button, .cancel-button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    margin: 0 10px;
+}
+
+.confirm-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
